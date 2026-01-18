@@ -1,4 +1,5 @@
 import bcrypt from "bcryptjs";
+import sendVerificationEmail from "./send_verification_email.js";
 
 export default async function createUser(c) {
   const db = c.env.DB;
@@ -20,7 +21,7 @@ export default async function createUser(c) {
   const hash = await bcrypt.hash(password, 10);
 
   const result = await db.prepare(
-    "INSERT INTO users (email, password_hash) VALUES (?, ?)"
+    "INSERT INTO users (email, password_hash,email_verified) VALUES (?, ?)"
   ).bind(email, hash)
   .run();
 

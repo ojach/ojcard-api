@@ -52,8 +52,32 @@ app.post("/card/api/send_test_email", async (c) => {
     body: JSON.stringify({
       from: "OJapp <noreply@ojapp.app>",
       to: email,
-      subject: "Test mail",
-      html: "<p>これはテストメールです。</p>"
+      subject: "認証メール",
+      html: "<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color:#222; line-height:1.6; padding:24px;">
+  <h2 style="margin-bottom:16px;">OJapp Card - メール認証</h2>
+
+  <p>OJapp Card へようこそ！</p>
+
+  <p>アカウントを有効化するには、下のボタンをクリックしてください。</p>
+
+  <a href="{{verify_url}}" 
+     style="display:inline-block; margin-top:24px; padding:12px 20px; background:#4B8BFF; color:#fff; text-decoration:none; border-radius:6px;">
+    メールアドレスを認証する
+  </a>
+
+  <p style="margin-top:24px; font-size:13px; color:#555;">
+    ※ このリンクは 30 分間 有効です。<br>
+    ※ ご本人に覚えがない場合は、このメールは無視してください。
+  </p>
+
+  <hr style="margin:32px 0; border:none; border-top:1px solid #ddd;">
+
+  <p style="font-size:12px; color:#888;">
+    OJapp Card<br>
+    <a href="https://ojapp.app" style="color:#888;">https://ojapp.app</a>
+  </p>
+</div>
+"
     })
   });
 

@@ -52,7 +52,7 @@ app.post("/card/api/send_test_email", async (c) => {
     body: JSON.stringify({
       from: "OJapp <noreply@ojapp.app>",
       to: email,
-      subject: "認証メール",
+      subject: "メール認証",
       html: "<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color:#222; line-height:1.6; padding:24px;">
   <h2 style="margin-bottom:16px;">OJapp Card - メール認証</h2>
 

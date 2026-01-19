@@ -4,7 +4,7 @@ compatibility_date = "2025-01-01"
 
 [vars]
 JWT_SECRET = "3f4c14bf-7b4b-4375-8cec-c6ae98d224c9-7aa1370f-4ec7-4e58-9e98-a8d2de8415b5"
-RESEND_API_KEY = "placeholder"
+
 
 [[d1_databases]]
 binding = "DB"
@@ -17,9 +17,10 @@ bucket_name = "ojapp-card"
 
 
 [[routes]]
-pattern = "ojapp.app/card/api/"
+pattern = "https://ojapp.app/card/api/*"
 zone_id = "1aa9f4c82250c7dffedb68a5bea7e2b5"
 
 [[routes]]
-pattern = "ojapp.app/card/@"
+pattern = "https://ojapp.app/card/@*"
 zone_id = "1aa9f4c82250c7dffedb68a5bea7e2b5"
+

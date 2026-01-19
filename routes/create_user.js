@@ -38,5 +38,5 @@ export default async function createUser(c) {
   await sendVerificationEmail(c.env, email, userId);
 
   // --- レスポンス ---
-  return c.json({ ok: true, user_id: userId, status: "created" });
+  return c.json({ ok: true, status: "ok", user_id: userId });
 }

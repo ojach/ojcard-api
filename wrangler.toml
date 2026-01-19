@@ -2,6 +2,10 @@ name = "ojcard"
 main = "worker.js"
 compatibility_date = "2025-01-01"
 
+[vars]
+JWT_SECRET = "3f4c14bf-7b4b-4375-8cec-c6ae98d224c9-7aa1370f-4ec7-4e58-9e98-a8d2de8415b5"
+RESEND_API_KEY = "${{ secrets.RESEND_API_KEY }}"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "ojappcard"
